@@ -1,0 +1,28 @@
+{
+  "description": "Redis-based distributed task scheduler with job queuing and automatic retries.",
+  "versions": ["beta"],
+  "modules": [
+    {
+      "name": "redis",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/redis",
+        "version": "latest"
+      },
+      "versions": ["beta"]
+    }
+  ],
+  "files": {
+    "beta": {
+      "type": "git",
+      "remote": "git@github.com:AntelopeJS/redis.git",
+      "path": ".antelope/output/redis_scheduler"
+    }
+  },
+  "dependencies": {
+    "beta": {
+      "packages": ["redis@4.7.0", "@types/redis@4.0.11"],
+      "interfaces": ["redis@beta"]
+    }
+  }
+}

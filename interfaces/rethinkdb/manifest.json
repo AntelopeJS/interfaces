@@ -1,0 +1,28 @@
+{
+  "description": "TypeScript interface for RethinkDB with native query builder and promise-based API.",
+  "versions": ["beta"],
+  "modules": [
+    {
+      "name": "rethinkdb",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/rethinkdb",
+        "version": "latest"
+      },
+      "versions": ["beta"]
+    }
+  ],
+  "files": {
+    "beta": {
+      "type": "git",
+      "remote": "git@github.com:AntelopeJS/rethinkdb.git",
+      "path": ".antelope/output/rethinkdb"
+    }
+  },
+  "dependencies": {
+    "beta": {
+      "packages": ["rethinkdb-ts@2.7.0"],
+      "interfaces": []
+    }
+  }
+}

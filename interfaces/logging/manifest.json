@@ -1,0 +1,18 @@
+{
+  "description": "Logging functionality for AntelopeJS framework.",
+  "versions": ["beta"],
+  "modules": [],
+  "files": {
+    "beta": {
+      "type": "git",
+      "remote": "git@github.com:AntelopeJS/antelopejs.git",
+      "path": ".antelope/output/logging"
+    }
+  },
+  "dependencies": {
+    "beta": {
+      "packages": [],
+      "interfaces": []
+    }
+  }
+}

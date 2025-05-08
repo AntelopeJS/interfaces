@@ -1,0 +1,28 @@
+{
+  "description": "Stripe payment processing module with payment intents and webhook handling.",
+  "versions": ["beta"],
+  "modules": [
+    {
+      "name": "stripe",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/stripe",
+        "version": "latest"
+      },
+      "versions": ["beta"]
+    }
+  ],
+  "files": {
+    "beta": {
+      "type": "git",
+      "remote": "git@github.com:AntelopeJS/stripe.git",
+      "path": ".antelope/output/stripe"
+    }
+  },
+  "dependencies": {
+    "beta": {
+      "packages": ["stripe@18.0.0"],
+      "interfaces": []
+    }
+  }
+}

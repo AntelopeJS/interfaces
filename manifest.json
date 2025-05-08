@@ -1,0 +1,23 @@
+{
+  "starredInterfaces": [
+    "api",
+    "auth-jwt",
+    "data-api",
+    "database-decorators",
+    "stripe"
+  ],
+  "templates": [
+    {
+      "name": "Blank Typescript",
+      "description": "A blank Typescript module",
+      "repository": "git@github.com:AntelopeJS/template-blank-typescript.git",
+      "branch": "main"
+    },
+    {
+      "name": "Sample Typescript",
+      "description": "A sample Typescript module for a basic todo app",
+      "repository": "git@github.com:AntelopeJS/template-sample-typescript.git",
+      "branch": "main"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "description": "Promise-based Redis client with key-value operations and pub/sub messaging.",
+  "versions": ["beta"],
+  "modules": [
+    {
+      "name": "redis",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/redis",
+        "version": "latest"
+      },
+      "versions": ["beta"]
+    }
+  ],
+  "files": {
+    "beta": {
+      "type": "git",
+      "remote": "git@github.com:AntelopeJS/redis.git",
+      "path": ".antelope/output/redis"
+    }
+  },
+  "dependencies": {
+    "beta": {
+      "packages": ["redis@4.7.0", "@types/redis@4.0.11"],
+      "interfaces": []
+    }
+  }
+}

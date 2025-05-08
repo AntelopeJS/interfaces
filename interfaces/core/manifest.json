@@ -1,0 +1,18 @@
+{
+  "description": "Core functionality and utilities for AntelopeJS framework.",
+  "versions": ["beta"],
+  "modules": [],
+  "files": {
+    "beta": {
+      "type": "git",
+      "remote": "git@github.com:AntelopeJS/antelopejs.git",
+      "path": ".antelope/output/core"
+    }
+  },
+  "dependencies": {
+    "beta": {
+      "packages": [],
+      "interfaces": []
+    }
+  }
+}

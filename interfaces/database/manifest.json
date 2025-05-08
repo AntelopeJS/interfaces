@@ -1,0 +1,37 @@
+{
+  "description": "Database-agnostic query language (AQL) for consistent database operations across systems.",
+  "versions": ["beta"],
+  "modules": [
+    {
+      "name": "mongodb",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/mongodb",
+        "version": "latest"
+      },
+      "versions": ["beta"]
+    },
+    {
+      "name": "rethinkdb",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/rethinkdb",
+        "version": "latest"
+      },
+      "versions": ["beta"]
+    }
+  ],
+  "files": {
+    "beta": {
+      "type": "git",
+      "remote": "git@github.com:AntelopeJS/mongodb.git",
+      "path": ".antelope/output/database"
+    }
+  },
+  "dependencies": {
+    "beta": {
+      "packages": [],
+      "interfaces": []
+    }
+  }
+}

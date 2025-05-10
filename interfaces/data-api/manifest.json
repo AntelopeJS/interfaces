@@ -15,7 +15,7 @@
   "files": {
     "beta": {
       "type": "git",
-      "remote": "git@github.com:AntelopeJS/data-api.git",
+      "remote": "https://github.com/AntelopeJS/data-api.git",
       "path": ".antelope/output/data-api"
     }
   },

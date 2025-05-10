@@ -15,7 +15,7 @@
   "files": {
     "beta": {
       "type": "git",
-      "remote": "git@github.com:AntelopeJS/redis.git",
+      "remote": "https://github.com/AntelopeJS/redis.git",
       "path": ".antelope/output/redis_scheduler"
     }
   },

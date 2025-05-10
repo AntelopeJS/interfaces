@@ -15,7 +15,7 @@
   "files": {
     "beta": {
       "type": "git",
-      "remote": "git@github.com:AntelopeJS/stripe.git",
+      "remote": "https://github.com/AntelopeJS/stripe.git",
       "path": ".antelope/output/stripe"
     }
   },

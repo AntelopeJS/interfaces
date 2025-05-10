@@ -5,7 +5,7 @@
   "files": {
     "beta": {
       "type": "git",
-      "remote": "git@github.com:AntelopeJS/antelopejs.git",
+      "remote": "https://github.com/AntelopeJS/antelopejs.git",
       "path": ".antelope/output/logging"
     }
   },

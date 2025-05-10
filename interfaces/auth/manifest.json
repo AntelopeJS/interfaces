@@ -15,7 +15,7 @@
   "files": {
     "beta": {
       "type": "git",
-      "remote": "git@github.com:AntelopeJS/auth-jwt.git",
+      "remote": "https://github.com/AntelopeJS/auth-jwt.git",
       "path": ".antelope/output/auth"
     }
   },

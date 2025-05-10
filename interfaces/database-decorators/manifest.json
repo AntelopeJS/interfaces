@@ -15,7 +15,7 @@
   "files": {
     "beta": {
       "type": "git",
-      "remote": "git@github.com:AntelopeJS/database-decorators.git",
+      "remote": "https://github.com/AntelopeJS/database-decorators.git",
       "path": ".antelope/output/database-decorators"
     }
   },

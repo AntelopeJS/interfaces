@@ -15,7 +15,7 @@
   "files": {
     "beta": {
       "type": "git",
-      "remote": "git@github.com:AntelopeJS/rethinkdb.git",
+      "remote": "https://github.com/AntelopeJS/rethinkdb.git",
       "path": ".antelope/output/rethinkdb"
     }
   },

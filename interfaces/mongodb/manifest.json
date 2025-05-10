@@ -15,7 +15,7 @@
   "files": {
     "beta": {
       "type": "git",
-      "remote": "git@github.com:AntelopeJS/mongodb.git",
+      "remote": "https://github.com/AntelopeJS/mongodb.git",
       "path": ".antelope/output/mongodb"
     }
   },

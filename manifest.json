@@ -1,9 +1,15 @@
 {
   "starredInterfaces": [
     "api",
-    "auth-jwt",
+    "auth",
     "data-api",
     "database-decorators",
+    "database",
+    "logging",
+    "mongodb",
+    "redis_scheduler",
+    "redis",
+    "rethinkdb",
     "stripe"
   ],
   "templates": [
@@ -14,7 +20,7 @@
       "branch": "main"
     },
     {
-      "name": "Sample Typescript",
+      "name": "Todo App Typescript",
       "description": "A sample Typescript module for a basic todo app",
       "repository": "https://github.com/AntelopeJS/template-sample-typescript.git",
       "branch": "main"

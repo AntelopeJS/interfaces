@@ -16,7 +16,7 @@
     "beta": {
       "type": "git",
       "remote": "https://github.com/AntelopeJS/mongodb.git",
-      "path": ".antelope/output/mongodb"
+      "path": "output/mongodb"
     }
   },
   "dependencies": {

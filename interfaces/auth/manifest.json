@@ -16,7 +16,7 @@
     "beta": {
       "type": "git",
       "remote": "https://github.com/AntelopeJS/auth-jwt.git",
-      "path": ".antelope/output/auth"
+      "path": "output/auth"
     }
   },
   "dependencies": {

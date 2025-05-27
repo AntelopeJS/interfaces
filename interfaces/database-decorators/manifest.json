@@ -16,7 +16,7 @@
     "beta": {
       "type": "git",
       "remote": "https://github.com/AntelopeJS/database-decorators.git",
-      "path": ".antelope/output/database-decorators"
+      "path": "output/database-decorators"
     }
   },
   "dependencies": {

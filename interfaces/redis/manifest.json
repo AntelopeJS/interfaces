@@ -16,7 +16,7 @@
     "beta": {
       "type": "git",
       "remote": "https://github.com/AntelopeJS/redis.git",
-      "path": ".antelope/output/redis"
+      "path": "output/redis"
     }
   },
   "dependencies": {

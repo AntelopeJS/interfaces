@@ -16,7 +16,7 @@
     "beta": {
       "type": "git",
       "remote": "https://github.com/AntelopeJS/stripe.git",
-      "path": ".antelope/output/stripe"
+      "path": "output/stripe"
     }
   },
   "dependencies": {

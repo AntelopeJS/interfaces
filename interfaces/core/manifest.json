@@ -6,7 +6,7 @@
     "beta": {
       "type": "git",
       "remote": "https://github.com/AntelopeJS/antelopejs.git",
-      "path": ".antelope/output/core"
+      "path": "output/core"
     }
   },
   "dependencies": {

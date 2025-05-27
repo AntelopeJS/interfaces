@@ -16,7 +16,7 @@
     "beta": {
       "type": "git",
       "remote": "https://github.com/AntelopeJS/rethinkdb.git",
-      "path": ".antelope/output/rethinkdb"
+      "path": "output/rethinkdb"
     }
   },
   "dependencies": {

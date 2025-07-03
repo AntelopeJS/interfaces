@@ -6,12 +6,6 @@
 <a href="https://antelopejs.com/docs/interfaces/introduction"><img src="https://img.shields.io/badge/Docs-18181B?style=for-the-badge&color=000000" alt="Documentation"></a>
 </div>
 
-# AntelopeJS Interfaces
-
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
-[![Documentation Status](https://img.shields.io/badge/docs-latest-brightgreen)](https://antelopejs.com)
-
 This repository contains interface definitions for the AntelopeJS ecosystem. Interfaces define standardized APIs that allow different modules to communicate with each other and enable interoperability within the AntelopeJS modular architecture.
 
 ## What are Interfaces?

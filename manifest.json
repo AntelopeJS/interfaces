@@ -21,6 +21,13 @@
       "interfaces": []
     },
     {
+      "name": "Module Typescript",
+      "description": "Start developing new interfaces or implementing existing ones",
+      "repository": "https://github.com/AntelopeJS/template-module-typescript.git",
+      "branch": "main",
+      "interfaces": []
+    },
+    {
       "name": "Todo App Typescript",
       "description": "A sample Typescript module for a basic todo app",
       "repository": "https://github.com/AntelopeJS/template-todo-typescript.git",

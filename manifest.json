@@ -1,6 +1,7 @@
 {
   "starredInterfaces": [
     "api",
+    "api-util",
     "auth",
     "data-api",
     "database-decorators",

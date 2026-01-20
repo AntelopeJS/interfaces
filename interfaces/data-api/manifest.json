@@ -22,7 +22,7 @@
   "dependencies": {
     "beta": {
       "packages": [],
-      "interfaces": ["api@beta", "database@beta", "database-decorators@beta"]
+      "interfaces": ["api@beta", "database@beta", "database-decorators@beta", "api-util@beta"]
     }
   }
 }

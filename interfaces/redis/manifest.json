@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "beta": {
-      "packages": ["redis@4.7.0", "@types/redis@4.0.11"],
+      "packages": ["ioredis@^5.4.2"],
       "interfaces": []
     }
   }

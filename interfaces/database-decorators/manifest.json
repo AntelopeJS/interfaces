@@ -1,6 +1,5 @@
 {
   "description": "TypeScript ORM library with decorators for database schema definition and model mapping.",
-  "versions": ["beta"],
   "modules": [
     {
       "name": "database-decorators",
@@ -8,21 +7,22 @@
         "type": "package",
         "package": "@antelopejs/database-decorators",
         "version": "latest"
-      },
-      "versions": ["beta"]
+      }
     }
   ],
   "files": {
-    "beta": {
-      "type": "git",
-      "remote": "https://github.com/AntelopeJS/database-decorators.git",
-      "path": "output/database-decorators"
-    }
+    "type": "git",
+    "remote": "https://github.com/AntelopeJS/database-decorators.git",
+    "path": "output/database-decorators"
   },
   "dependencies": {
-    "beta": {
-      "packages": ["randomstring@1.3.1", "@types/randomstring@1.3.0"],
-      "interfaces": ["database@beta", "api@beta"]
-    }
+    "packages": [
+      "randomstring@1.3.1",
+      "@types/randomstring@1.3.0"
+    ],
+    "interfaces": [
+      "database@beta",
+      "api@beta"
+    ]
   }
 }

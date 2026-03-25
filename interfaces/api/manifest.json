@@ -1,6 +1,5 @@
 {
   "description": "TypeScript HTTP framework with decorator controllers and middleware support.",
-  "versions": ["beta"],
   "modules": [
     {
       "name": "api",
@@ -8,21 +7,16 @@
         "type": "package",
         "package": "@antelopejs/api",
         "version": "latest"
-      },
-      "versions": ["beta"]
+      }
     }
   ],
   "files": {
-    "beta": {
-      "type": "git",
-      "remote": "https://github.com/AntelopeJS/api.git",
-      "path": "output/api"
-    }
+    "type": "git",
+    "remote": "https://github.com/AntelopeJS/api.git",
+    "path": "output/api"
   },
   "dependencies": {
-    "beta": {
-      "packages": [],
-      "interfaces": []
-    }
+    "packages": [],
+    "interfaces": []
   }
 }

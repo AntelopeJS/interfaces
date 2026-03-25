@@ -1,6 +1,5 @@
 {
   "description": "Data access layer for REST APIs with CRUD operations and relational capabilities.",
-  "versions": ["beta"],
   "modules": [
     {
       "name": "data-api",
@@ -8,21 +7,21 @@
         "type": "package",
         "package": "@antelopejs/data-api",
         "version": "latest"
-      },
-      "versions": ["beta"]
+      }
     }
   ],
   "files": {
-    "beta": {
-      "type": "git",
-      "remote": "https://github.com/AntelopeJS/data-api.git",
-      "path": "output/data-api"
-    }
+    "type": "git",
+    "remote": "https://github.com/AntelopeJS/data-api.git",
+    "path": "output/data-api"
   },
   "dependencies": {
-    "beta": {
-      "packages": [],
-      "interfaces": ["api@beta", "database@beta", "database-decorators@beta", "api-util@beta"]
-    }
+    "packages": [],
+    "interfaces": [
+      "api@beta",
+      "database@beta",
+      "database-decorators@beta",
+      "api-util@beta"
+    ]
   }
 }

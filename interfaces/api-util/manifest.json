@@ -1,6 +1,5 @@
 {
   "description": "Utility functions for API request validation and error handling in TypeScript.",
-  "versions": ["beta"],
   "modules": [
     {
       "name": "api",
@@ -8,21 +7,18 @@
         "type": "package",
         "package": "@antelopejs/api",
         "version": "latest"
-      },
-      "versions": ["beta"]
+      }
     }
   ],
   "files": {
-    "beta": {
-      "type": "git",
-      "remote": "https://github.com/AntelopeJS/api.git",
-      "path": "output/api-util"
-    }
+    "type": "git",
+    "remote": "https://github.com/AntelopeJS/api.git",
+    "path": "output/api-util"
   },
   "dependencies": {
-    "beta": {
-      "packages": [],
-      "interfaces": ["api@beta"]
-    }
+    "packages": [],
+    "interfaces": [
+      "api@beta"
+    ]
   }
 }

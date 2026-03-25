@@ -1,6 +1,5 @@
 {
   "description": "Type-safe MongoDB client interface for native operations and functionality.",
-  "versions": ["beta"],
   "modules": [
     {
       "name": "mongodb",
@@ -8,21 +7,18 @@
         "type": "package",
         "package": "@antelopejs/mongodb",
         "version": "latest"
-      },
-      "versions": ["beta"]
+      }
     }
   ],
   "files": {
-    "beta": {
-      "type": "git",
-      "remote": "https://github.com/AntelopeJS/mongodb.git",
-      "path": "output/mongodb"
-    }
+    "type": "git",
+    "remote": "https://github.com/AntelopeJS/mongodb.git",
+    "path": "output/mongodb"
   },
   "dependencies": {
-    "beta": {
-      "packages": ["mongodb@6.15.0"],
-      "interfaces": []
-    }
+    "packages": [
+      "mongodb@6.15.0"
+    ],
+    "interfaces": []
   }
 }

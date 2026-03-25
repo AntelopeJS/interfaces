@@ -1,6 +1,5 @@
 {
   "description": "Decorator-based authentication system with flexible sources and API integration.",
-  "versions": ["beta"],
   "modules": [
     {
       "name": "auth-jwt",
@@ -8,21 +7,18 @@
         "type": "package",
         "package": "@antelopejs/auth-jwt",
         "version": "latest"
-      },
-      "versions": ["beta"]
+      }
     }
   ],
   "files": {
-    "beta": {
-      "type": "git",
-      "remote": "https://github.com/AntelopeJS/auth-jwt.git",
-      "path": "output/auth"
-    }
+    "type": "git",
+    "remote": "https://github.com/AntelopeJS/auth-jwt.git",
+    "path": "output/auth"
   },
   "dependencies": {
-    "beta": {
-      "packages": [],
-      "interfaces": ["api@beta"]
-    }
+    "packages": [],
+    "interfaces": [
+      "api@beta"
+    ]
   }
 }

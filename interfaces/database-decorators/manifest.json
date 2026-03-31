@@ -1,5 +1,6 @@
 {
   "description": "TypeScript ORM library with decorators for database schema definition and model mapping.",
+  "package": "@antelopejs/interface-database-decorators",
   "modules": [
     {
       "name": "database-decorators",

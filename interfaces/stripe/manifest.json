@@ -1,5 +1,6 @@
 {
   "description": "Stripe payment processing module with payment intents and webhook handling.",
+  "package": "@antelopejs/interface-stripe",
   "modules": [
     {
       "name": "stripe",

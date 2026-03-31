@@ -1,5 +1,6 @@
 {
   "description": "TypeScript interface for RethinkDB with native query builder and promise-based API.",
+  "package": "@antelopejs/interface-rethinkdb",
   "modules": [
     {
       "name": "rethinkdb",

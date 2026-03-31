@@ -1,4 +1,5 @@
 {
   "description": "Core functionality and utilities for AntelopeJS framework.",
+  "package": "@antelopejs/interface-core",
   "modules": []
 }

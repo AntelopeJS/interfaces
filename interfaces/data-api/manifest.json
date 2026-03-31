@@ -1,5 +1,6 @@
 {
   "description": "Data access layer for REST APIs with CRUD operations and relational capabilities.",
+  "package": "@antelopejs/interface-data-api",
   "modules": [
     {
       "name": "data-api",

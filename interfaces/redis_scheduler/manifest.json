@@ -1,5 +1,6 @@
 {
   "description": "Redis-based distributed task scheduler with job queuing and automatic retries.",
+  "package": "@antelopejs/interface-redis-scheduler",
   "modules": [
     {
       "name": "redis",

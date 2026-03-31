@@ -1,5 +1,6 @@
 {
   "description": "Utility functions for API request validation and error handling in TypeScript.",
+  "package": "@antelopejs/interface-api-util",
   "modules": [
     {
       "name": "api",

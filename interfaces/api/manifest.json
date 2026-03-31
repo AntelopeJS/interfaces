@@ -1,5 +1,6 @@
 {
   "description": "TypeScript HTTP framework with decorator controllers and middleware support.",
+  "package": "@antelopejs/interface-api",
   "modules": [
     {
       "name": "api",

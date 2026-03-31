@@ -1,5 +1,6 @@
 {
   "description": "Database-agnostic query language (AQL) for consistent database operations across systems.",
+  "package": "@antelopejs/interface-database",
   "modules": [
     {
       "name": "mongodb",

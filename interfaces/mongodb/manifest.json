@@ -1,5 +1,6 @@
 {
   "description": "Type-safe MongoDB client interface for native operations and functionality.",
+  "package": "@antelopejs/interface-mongodb",
   "modules": [
     {
       "name": "mongodb",

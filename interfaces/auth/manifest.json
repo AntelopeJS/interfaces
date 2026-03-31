@@ -1,5 +1,6 @@
 {
   "description": "Decorator-based authentication system with flexible sources and API integration.",
+  "package": "@antelopejs/interface-auth",
   "modules": [
     {
       "name": "auth-jwt",

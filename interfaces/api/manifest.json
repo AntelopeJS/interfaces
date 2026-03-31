@@ -9,14 +9,5 @@
         "version": "latest"
       }
     }
-  ],
-  "files": {
-    "type": "git",
-    "remote": "https://github.com/AntelopeJS/api.git",
-    "path": "output/api"
-  },
-  "dependencies": {
-    "packages": [],
-    "interfaces": []
-  }
+  ]
 }

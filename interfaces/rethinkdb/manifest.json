@@ -9,16 +9,5 @@
         "version": "latest"
       }
     }
-  ],
-  "files": {
-    "type": "git",
-    "remote": "https://github.com/AntelopeJS/rethinkdb.git",
-    "path": "output/rethinkdb"
-  },
-  "dependencies": {
-    "packages": [
-      "rethinkdb-ts@2.7.0"
-    ],
-    "interfaces": []
-  }
+  ]
 }

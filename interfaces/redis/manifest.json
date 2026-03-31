@@ -9,16 +9,5 @@
         "version": "latest"
       }
     }
-  ],
-  "files": {
-    "type": "git",
-    "remote": "https://github.com/AntelopeJS/redis.git",
-    "path": "output/redis"
-  },
-  "dependencies": {
-    "packages": [
-      "ioredis@^5.4.2"
-    ],
-    "interfaces": []
-  }
+  ]
 }

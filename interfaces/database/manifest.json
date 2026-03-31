@@ -17,14 +17,5 @@
         "version": "latest"
       }
     }
-  ],
-  "files": {
-    "type": "git",
-    "remote": "https://github.com/AntelopeJS/mongodb.git",
-    "path": "output/database"
-  },
-  "dependencies": {
-    "packages": [],
-    "interfaces": []
-  }
+  ]
 }

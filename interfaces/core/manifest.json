@@ -1,13 +1,4 @@
 {
   "description": "Core functionality and utilities for AntelopeJS framework.",
-  "modules": [],
-  "files": {
-    "type": "git",
-    "remote": "https://github.com/AntelopeJS/antelopejs.git",
-    "path": "output/core"
-  },
-  "dependencies": {
-    "packages": [],
-    "interfaces": []
-  }
+  "modules": []
 }

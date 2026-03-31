@@ -1,4 +1,18 @@
 {
+  "interfaces": {
+    "@antelopejs/interface-api": "api",
+    "@antelopejs/interface-api-util": "api-util",
+    "@antelopejs/interface-auth": "auth",
+    "@antelopejs/interface-core": "core",
+    "@antelopejs/interface-data-api": "data-api",
+    "@antelopejs/interface-database": "database",
+    "@antelopejs/interface-database-decorators": "database-decorators",
+    "@antelopejs/interface-mongodb": "mongodb",
+    "@antelopejs/interface-redis": "redis",
+    "@antelopejs/interface-redis-scheduler": "redis_scheduler",
+    "@antelopejs/interface-rethinkdb": "rethinkdb",
+    "@antelopejs/interface-stripe": "stripe"
+  },
   "starredInterfaces": [
     "api",
     "api-util",

@@ -1,0 +1,21 @@
+name: Documentation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: AntelopeJS/tooling-configs/actions/docs@310e3d861b2da2244902854379176c91e1ebc68e
+        with:
+          files: README.md

@@ -8,6 +8,13 @@
     "@antelopejs/interface-database": "database",
     "@antelopejs/interface-database-catalog": "database-catalog",
     "@antelopejs/interface-database-decorators": "database-decorators",
+    "@antelopejs/interface-dms": "dms",
+    "@antelopejs/interface-dms-automation": "dms-automation",
+    "@antelopejs/interface-dms-builder": "dms-builder",
+    "@antelopejs/interface-dms-mailing": "dms-mailing",
+    "@antelopejs/interface-dms-marketing": "dms-marketing",
+    "@antelopejs/interface-dms-media": "dms-media",
+    "@antelopejs/interface-dms-saas": "dms-saas",
     "@antelopejs/interface-email": "email",
     "@antelopejs/interface-file-storage": "file-storage",
     "@antelopejs/interface-mongodb": "mongodb",
@@ -23,6 +30,15 @@
     "data-api",
     "database",
     "database-decorators",
+    "dms",
+    "dms-automation",
+    "dms-builder",
+    "dms-mailing",
+    "dms-marketing",
+    "dms-media",
+    "dms-saas",
+    "email",
+    "file-storage",
     "logging",
     "mongodb",
     "redis",
@@ -42,9 +58,49 @@
       "branch": "main"
     },
     {
+      "name": "DMS Module Typescript",
+      "description": "Reusable DMS module with a Vue component and a local playground. Requires Node.js 24, pnpm and MongoDB.",
+      "repository": "https://github.com/AntelopeJS/template-module-dms.git",
+      "branch": "main",
+      "packageManager": "pnpm",
+      "nextSteps": [
+        {
+          "command": "pnpm services:up",
+          "description": "Start MongoDB and Mailpit with Docker Compose, or configure your local services in playground/.env."
+        },
+        {
+          "command": "pnpm dev",
+          "description": "Start the playground backend in watch mode."
+        },
+        {
+          "command": "pnpm frontend:dev",
+          "description": "In a second terminal, start the dashboard and create the first administrator."
+        }
+      ]
+    },
+    {
       "name": "Todo App Typescript",
       "repository": "https://github.com/AntelopeJS/template-todo-typescript.git",
       "branch": "main"
+    }
+  ],
+  "projectTemplates": [
+    {
+      "name": "DMS Demo",
+      "description": "Complete dashboard with all DMS features and a Vue frontend. Requires Node.js 24, pnpm and MongoDB.",
+      "repository": "https://github.com/AntelopeJS/template-dms-demo.git",
+      "branch": "main",
+      "packageManager": "pnpm",
+      "nextSteps": [
+        {
+          "command": "pnpm dev",
+          "description": "Start MongoDB first, then install the configured modules and start the DMS backend. No .env is required with the development defaults."
+        },
+        {
+          "command": "pnpm frontend:dev",
+          "description": "In a second terminal in this directory, start the dashboard and open the printed URL to create the first administrator."
+        }
+      ]
     }
   ]
 }

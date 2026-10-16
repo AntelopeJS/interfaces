@@ -1,0 +1,14 @@
+{
+  "description": "DMS SaaS plans, subscriptions and billing.",
+  "package": "@antelopejs/interface-dms-saas",
+  "modules": [
+    {
+      "name": "dms-saas",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/dms-saas",
+        "version": "latest"
+      }
+    }
+  ]
+}

@@ -9,6 +9,14 @@
         "package": "@antelopejs/nodemailer",
         "version": "latest"
       }
+    },
+    {
+      "name": "brevo",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/brevo",
+        "version": "latest"
+      }
     }
   ]
 }

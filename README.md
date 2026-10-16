@@ -12,6 +12,7 @@ The catalog the `ajs` CLI reads to find which modules implement an interface. It
 
 - `ajs project modules install` finds the interfaces a project imports without an implementation, and offers the modules this registry lists for them.
 - `ajs module init` offers the starred interfaces of this registry when it scaffolds a module, and the templates listed here.
+- `ajs project init` also offers complete project templates, including **DMS Demo**.
 - Each interface has a folder under `interfaces/` with a `manifest.json`: a description, the interface package and the modules that implement it.
 - The root `manifest.json` maps each interface package to its folder and lists the starred interfaces and the project templates.
 
@@ -27,7 +28,7 @@ The catalog the `ajs` CLI reads to find which modules implement an interface. It
 | [Database](https://interfaces.antelopejs.com/docs/database)                                 | `@antelopejs/interface-database`            | `@antelopejs/mongodb`, `@antelopejs/rethinkdb`                  |
 | [Database Catalog](https://github.com/AntelopeJS/interface-database-catalog/tree/main/docs) | `@antelopejs/interface-database-catalog`    | none: no public implementation yet                              |
 | [Database Decorators](https://interfaces.antelopejs.com/docs/database-decorators)           | `@antelopejs/interface-database-decorators` | `@antelopejs/database-decorators`                               |
-| [Email](https://github.com/AntelopeJS/interface-email/tree/main/docs)                       | `@antelopejs/interface-email`               | `@antelopejs/nodemailer`                                        |
+| [Email](https://github.com/AntelopeJS/interface-email/tree/main/docs)                       | `@antelopejs/interface-email`               | `@antelopejs/nodemailer`, `@antelopejs/brevo`                     |
 | [File Storage](https://github.com/AntelopeJS/interface-file-storage/tree/main/docs)         | `@antelopejs/interface-file-storage`        | `@antelopejs/file-storage-s3`, `@antelopejs/file-storage-local` |
 | [Logging](https://interfaces.antelopejs.com/docs/core/logging)                              | `@antelopejs/interface-core`                | none: `@antelopejs/core` provides it                            |
 | [MongoDB](https://interfaces.antelopejs.com/docs/mongodb)                                   | `@antelopejs/interface-mongodb`             | `@antelopejs/mongodb`                                           |
@@ -48,6 +49,18 @@ monorepos this is `packages/interface-dms-*/docs/`; the
 contracts separately from the runtime guides. This registry is not an inventory
 of every package that can participate in AntelopeJS.
 
+The catalog also includes these contracts:
+
+| Interface | Package | Modules listed |
+| --- | --- | --- |
+| DMS | `@antelopejs/interface-dms` | `@antelopejs/dms` |
+| DMS Automation | `@antelopejs/interface-dms-automation` | `@antelopejs/dms-automation` |
+| DMS Builder | `@antelopejs/interface-dms-builder` | `@antelopejs/dms-builder` |
+| DMS Mailing | `@antelopejs/interface-dms-mailing` | `@antelopejs/dms-mailing` |
+| DMS Marketing | `@antelopejs/interface-dms-marketing` | `@antelopejs/dms-marketing` |
+| DMS Media | `@antelopejs/interface-dms-media` | `@antelopejs/dms-media` |
+| DMS SaaS | `@antelopejs/interface-dms-saas` | `@antelopejs/dms-saas` |
+
 ## Use it
 
 The CLI reads this repository by default. Resolve the missing implementations of a project from its folder:
@@ -55,6 +68,64 @@ The CLI reads this repository by default. Resolve the missing implementations of
 ```bash
 ajs project modules install
 ```
+
+### Start a DMS project
+
+Use a CLI release with project-template support to select **DMS Demo** in
+`ajs project init`, or pass the template explicitly:
+
+```bash
+ajs project init my-app --template "DMS Demo" --yes
+cd my-app
+pnpm dev
+```
+
+The demo requires Node.js 24, pnpm and a running MongoDB instance. Run
+`pnpm frontend:dev` in a second terminal, then open the printed dashboard URL
+to create the first administrator. See the [template README](https://github.com/AntelopeJS/template-dms-demo#readme)
+for configuration and direct-clone instructions for older CLIs.
+
+`modules install` resolves missing contracts; it is not a menu of every DMS
+feature. Modules such as `dms-ai`, `dms-api`, `dms-database` and `dms-lang`
+do not declare an interface implementation. The demo already configures them.
+Installing an interface package alone does not configure a working dashboard.
+
+### Start a reusable DMS module
+
+Select **DMS Module Typescript** in `ajs module init`, or pass it explicitly:
+
+```bash
+ajs module init my-module --template "DMS Module Typescript" --pm pnpm --yes
+cd my-module
+pnpm services:up
+pnpm dev
+```
+
+Run `pnpm frontend:dev` in a second terminal. This template contains a reusable
+module, one Vue component and a `playground/` project. Docker Compose supplies
+MongoDB and Mailpit; existing local services also work. See the
+[module template README](https://github.com/AntelopeJS/template-module-dms#readme).
+It belongs in `templates`, not `projectTemplates`: it is a module with a
+development host, not a complete application.
+
+### Project template metadata
+
+The root `projectTemplates` array holds complete projects. The CLI offers
+them only in `project init`, alongside the module templates in `templates`.
+Older CLIs ignore `projectTemplates`, so they cannot offer a project they
+would incorrectly overwrite. Keep complete projects out of `templates`.
+
+Both arrays use the required `name`, `repository` and `branch` fields and
+these optional fields:
+
+- `description`: a hint in the template selector, including prerequisites.
+- `packageManager`: require this package manager and skip its prompt.
+- `nextSteps`: commands and optional descriptions displayed after creation;
+  the CLI does not execute these commands automatically.
+
+Project creation requires the CLI release with project-template support.
+CLI releases through 1.15.2 do not list
+complete project templates; use the direct-clone instructions with those releases.
 
 ## Add an interface or an implementation
 

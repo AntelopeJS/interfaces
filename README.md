@@ -28,7 +28,7 @@ The catalog the `ajs` CLI reads to find which modules implement an interface. It
 | [Database](https://interfaces.antelopejs.com/docs/database)                                 | `@antelopejs/interface-database`            | `@antelopejs/mongodb`, `@antelopejs/rethinkdb`                  |
 | [Database Catalog](https://github.com/AntelopeJS/interface-database-catalog/tree/main/docs) | `@antelopejs/interface-database-catalog`    | none: no public implementation yet                              |
 | [Database Decorators](https://interfaces.antelopejs.com/docs/database-decorators)           | `@antelopejs/interface-database-decorators` | `@antelopejs/database-decorators`                               |
-| [Email](https://github.com/AntelopeJS/interface-email/tree/main/docs)                       | `@antelopejs/interface-email`               | `@antelopejs/nodemailer`                                        |
+| [Email](https://github.com/AntelopeJS/interface-email/tree/main/docs)                       | `@antelopejs/interface-email`               | `@antelopejs/nodemailer`, `@antelopejs/brevo`                     |
 | [File Storage](https://github.com/AntelopeJS/interface-file-storage/tree/main/docs)         | `@antelopejs/interface-file-storage`        | `@antelopejs/file-storage-s3`, `@antelopejs/file-storage-local` |
 | [Logging](https://interfaces.antelopejs.com/docs/core/logging)                              | `@antelopejs/interface-core`                | none: `@antelopejs/core` provides it                            |
 | [MongoDB](https://interfaces.antelopejs.com/docs/mongodb)                                   | `@antelopejs/interface-mongodb`             | `@antelopejs/mongodb`                                           |
@@ -53,7 +53,6 @@ The catalog also includes these contracts:
 
 | Interface | Package | Modules listed |
 | --- | --- | --- |
-| Database Catalog | `@antelopejs/interface-database-catalog` | none published in this catalog yet |
 | DMS | `@antelopejs/interface-dms` | `@antelopejs/dms` |
 | DMS Automation | `@antelopejs/interface-dms-automation` | `@antelopejs/dms-automation` |
 | DMS Builder | `@antelopejs/interface-dms-builder` | `@antelopejs/dms-builder` |
@@ -61,8 +60,6 @@ The catalog also includes these contracts:
 | DMS Marketing | `@antelopejs/interface-dms-marketing` | `@antelopejs/dms-marketing` |
 | DMS Media | `@antelopejs/interface-dms-media` | `@antelopejs/dms-media` |
 | DMS SaaS | `@antelopejs/interface-dms-saas` | `@antelopejs/dms-saas` |
-| Email | `@antelopejs/interface-email` | `@antelopejs/nodemailer`, `@antelopejs/brevo` |
-| File Storage | `@antelopejs/interface-file-storage` | `@antelopejs/file-storage-local`, `@antelopejs/file-storage-s3` |
 
 ## Use it
 
@@ -80,7 +77,6 @@ Use a CLI release with project-template support to select **DMS Demo** in
 ```bash
 ajs project init my-app --template "DMS Demo" --yes
 cd my-app
-pnpm run setup
 pnpm dev
 ```
 
@@ -101,7 +97,6 @@ Select **DMS Module Typescript** in `ajs module init`, or pass it explicitly:
 ```bash
 ajs module init my-module --template "DMS Module Typescript" --pm pnpm --yes
 cd my-module
-pnpm run setup
 pnpm services:up
 pnpm dev
 ```
@@ -128,8 +123,8 @@ these optional fields:
 - `nextSteps`: commands and optional descriptions displayed after creation;
   the CLI does not execute these commands automatically.
 
-Publish CLI support and the template's setup script before enabling a complete
-project template in the registry. CLI releases through 1.15.2 do not list
+Project creation requires the CLI release with project-template support.
+CLI releases through 1.15.2 do not list
 complete project templates; use the direct-clone instructions with those releases.
 
 ## Add an interface or an implementation

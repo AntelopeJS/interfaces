@@ -1,5 +1,5 @@
 {
-  "description": "Transactional email delivery through SMTP or an email provider.",
+  "description": "Provider-independent email sending with single, batch and template messages, attachments and capability discovery.",
   "package": "@antelopejs/interface-email",
   "modules": [
     {

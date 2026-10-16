@@ -18,21 +18,36 @@ The catalog the `ajs` CLI reads to find which modules implement an interface. It
 
 ## Interfaces
 
-| Interface                                                                         | Package                                     | Modules listed                                 |
-| --------------------------------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------- |
-| [API](https://interfaces.antelopejs.com/docs/api)                                 | `@antelopejs/interface-api`                 | `@antelopejs/api`                              |
-| [API Util](https://interfaces.antelopejs.com/docs/api-util)                       | `@antelopejs/interface-api-util`            | `@antelopejs/api`                              |
-| [Auth](https://interfaces.antelopejs.com/docs/auth)                               | `@antelopejs/interface-auth`                | `@antelopejs/auth-jwt`                         |
-| [Core](https://interfaces.antelopejs.com/docs/core)                               | `@antelopejs/interface-core`                | none: `@antelopejs/core` provides it           |
-| [Data API](https://interfaces.antelopejs.com/docs/data-api)                       | `@antelopejs/interface-data-api`            | `@antelopejs/data-api`                         |
-| [Database](https://interfaces.antelopejs.com/docs/database)                       | `@antelopejs/interface-database`            | `@antelopejs/mongodb`, `@antelopejs/rethinkdb` |
-| [Database Decorators](https://interfaces.antelopejs.com/docs/database-decorators) | `@antelopejs/interface-database-decorators` | `@antelopejs/database-decorators`              |
-| [Logging](https://interfaces.antelopejs.com/docs/core/logging)                    | `@antelopejs/interface-core`                | none: `@antelopejs/core` provides it           |
-| [MongoDB](https://interfaces.antelopejs.com/docs/mongodb)                         | `@antelopejs/interface-mongodb`             | `@antelopejs/mongodb`                          |
-| [Redis](https://interfaces.antelopejs.com/docs/redis)                             | `@antelopejs/interface-redis`               | `@antelopejs/redis`                            |
-| [Redis Scheduler](https://interfaces.antelopejs.com/docs/redis-scheduler)         | `@antelopejs/interface-redis-scheduler`     | `@antelopejs/redis`                            |
-| [RethinkDB](https://interfaces.antelopejs.com/docs/rethinkdb)                     | `@antelopejs/interface-rethinkdb`           | `@antelopejs/rethinkdb`                        |
-| [Stripe](https://interfaces.antelopejs.com/docs/stripe)                           | `@antelopejs/interface-stripe`              | `@antelopejs/stripe`                           |
+| Interface                                                                                   | Package                                     | Modules listed                                                  |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------- | --------------------------------------------------------------- |
+| [API](https://interfaces.antelopejs.com/docs/api)                                           | `@antelopejs/interface-api`                 | `@antelopejs/api`                                               |
+| [API Util](https://interfaces.antelopejs.com/docs/api-util)                                 | `@antelopejs/interface-api-util`            | `@antelopejs/api`                                               |
+| [Auth](https://interfaces.antelopejs.com/docs/auth)                                         | `@antelopejs/interface-auth`                | `@antelopejs/auth-jwt`                                          |
+| [Core](https://interfaces.antelopejs.com/docs/core)                                         | `@antelopejs/interface-core`                | none: `@antelopejs/core` provides it                            |
+| [Data API](https://interfaces.antelopejs.com/docs/data-api)                                 | `@antelopejs/interface-data-api`            | `@antelopejs/data-api`                                          |
+| [Database](https://interfaces.antelopejs.com/docs/database)                                 | `@antelopejs/interface-database`            | `@antelopejs/mongodb`, `@antelopejs/rethinkdb`                  |
+| [Database Catalog](https://github.com/AntelopeJS/interface-database-catalog/tree/main/docs) | `@antelopejs/interface-database-catalog`    | none: no public implementation yet                              |
+| [Database Decorators](https://interfaces.antelopejs.com/docs/database-decorators)           | `@antelopejs/interface-database-decorators` | `@antelopejs/database-decorators`                               |
+| [Email](https://github.com/AntelopeJS/interface-email/tree/main/docs)                       | `@antelopejs/interface-email`               | `@antelopejs/nodemailer`                                        |
+| [File Storage](https://github.com/AntelopeJS/interface-file-storage/tree/main/docs)         | `@antelopejs/interface-file-storage`        | `@antelopejs/file-storage-s3`, `@antelopejs/file-storage-local` |
+| [Logging](https://interfaces.antelopejs.com/docs/core/logging)                              | `@antelopejs/interface-core`                | none: `@antelopejs/core` provides it                            |
+| [MongoDB](https://interfaces.antelopejs.com/docs/mongodb)                                   | `@antelopejs/interface-mongodb`             | `@antelopejs/mongodb`                                           |
+| [Redis](https://interfaces.antelopejs.com/docs/redis)                                       | `@antelopejs/interface-redis`               | `@antelopejs/redis`                                             |
+| [Redis Scheduler](https://interfaces.antelopejs.com/docs/redis-scheduler)                   | `@antelopejs/interface-redis-scheduler`     | `@antelopejs/redis`                                             |
+| [RethinkDB](https://interfaces.antelopejs.com/docs/rethinkdb)                               | `@antelopejs/interface-rethinkdb`           | `@antelopejs/rethinkdb`                                         |
+| [Stripe](https://interfaces.antelopejs.com/docs/stripe)                                     | `@antelopejs/interface-stripe`              | `@antelopejs/stripe`                                            |
+
+Registration does not publish an npm package or deploy its documentation.
+Database Catalog is not yet published to npm. The public documentation site has
+its own source registry in `AntelopeJS/antelope-web`; add a source there when a
+public interface is ready to appear on the site. Private interfaces are not
+listed in this public registry.
+
+Each interface owns its reference in its package's `docs/` directory. For DMS
+monorepos this is `packages/interface-dms-*/docs/`; the
+[DMS documentation](https://dms.antelopejs.com/docs/interfaces) links those
+contracts separately from the runtime guides. This registry is not an inventory
+of every package that can participate in AntelopeJS.
 
 The catalog also includes these contracts:
 

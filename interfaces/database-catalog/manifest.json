@@ -1,0 +1,5 @@
+{
+  "description": "Development-only inspection and aggregate profiling of existing database relations. No public implementation is registered yet.",
+  "package": "@antelopejs/interface-database-catalog",
+  "modules": []
+}

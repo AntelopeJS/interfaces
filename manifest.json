@@ -65,10 +65,6 @@
       "packageManager": "pnpm",
       "nextSteps": [
         {
-          "command": "pnpm run setup",
-          "description": "Install the frontend and generate playground/.env without overwriting an existing one."
-        },
-        {
           "command": "pnpm services:up",
           "description": "Start MongoDB and Mailpit with Docker Compose, or configure your local services in playground/.env."
         },
@@ -97,12 +93,8 @@
       "packageManager": "pnpm",
       "nextSteps": [
         {
-          "command": "pnpm run setup",
-          "description": "Install the frontend and create .env without overwriting an existing one. Start MongoDB and adjust MONGODB_URL if needed."
-        },
-        {
           "command": "pnpm dev",
-          "description": "Install the configured modules and start the DMS backend."
+          "description": "Start MongoDB first, then install the configured modules and start the DMS backend. No .env is required with the development defaults."
         },
         {
           "command": "pnpm frontend:dev",

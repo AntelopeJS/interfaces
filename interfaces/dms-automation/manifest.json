@@ -1,0 +1,14 @@
+{
+  "description": "DMS automation workflows, triggers and actions.",
+  "package": "@antelopejs/interface-dms-automation",
+  "modules": [
+    {
+      "name": "dms-automation",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/dms-automation",
+        "version": "latest"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "description": "DMS media library, asset uploads, folders and permissions.",
+  "package": "@antelopejs/interface-dms-media",
+  "modules": [
+    {
+      "name": "dms-media",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/dms-media",
+        "version": "latest"
+      }
+    }
+  ]
+}

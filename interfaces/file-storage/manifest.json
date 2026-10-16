@@ -1,0 +1,22 @@
+{
+  "description": "File uploads and storage on the local filesystem or S3-compatible services.",
+  "package": "@antelopejs/interface-file-storage",
+  "modules": [
+    {
+      "name": "file-storage-local",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/file-storage-local",
+        "version": "latest"
+      }
+    },
+    {
+      "name": "file-storage-s3",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/file-storage-s3",
+        "version": "latest"
+      }
+    }
+  ]
+}

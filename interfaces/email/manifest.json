@@ -1,0 +1,22 @@
+{
+  "description": "Transactional email delivery through SMTP or an email provider.",
+  "package": "@antelopejs/interface-email",
+  "modules": [
+    {
+      "name": "nodemailer",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/nodemailer",
+        "version": "latest"
+      }
+    },
+    {
+      "name": "brevo",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/brevo",
+        "version": "latest"
+      }
+    }
+  ]
+}

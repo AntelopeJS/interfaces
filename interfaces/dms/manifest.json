@@ -1,0 +1,14 @@
+{
+  "description": "DMS dashboard, pages, authentication and data controllers.",
+  "package": "@antelopejs/interface-dms",
+  "modules": [
+    {
+      "name": "dms",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/dms",
+        "version": "latest"
+      }
+    }
+  ]
+}

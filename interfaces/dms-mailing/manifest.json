@@ -1,0 +1,14 @@
+{
+  "description": "DMS email templates, campaigns and mailing delivery.",
+  "package": "@antelopejs/interface-dms-mailing",
+  "modules": [
+    {
+      "name": "dms-mailing",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/dms-mailing",
+        "version": "latest"
+      }
+    }
+  ]
+}

@@ -12,6 +12,7 @@ The catalog the `ajs` CLI reads to find which modules implement an interface. It
 
 - `ajs project modules install` finds the interfaces a project imports without an implementation, and offers the modules this registry lists for them.
 - `ajs module init` offers the starred interfaces of this registry when it scaffolds a module, and the templates listed here.
+- `ajs project init` also offers complete project templates, including **DMS Demo**.
 - Each interface has a folder under `interfaces/` with a `manifest.json`: a description, the interface package and the modules that implement it.
 - The root `manifest.json` maps each interface package to its folder and lists the starred interfaces and the project templates.
 
@@ -33,6 +34,21 @@ The catalog the `ajs` CLI reads to find which modules implement an interface. It
 | [RethinkDB](https://interfaces.antelopejs.com/docs/rethinkdb)                     | `@antelopejs/interface-rethinkdb`           | `@antelopejs/rethinkdb`                        |
 | [Stripe](https://interfaces.antelopejs.com/docs/stripe)                           | `@antelopejs/interface-stripe`              | `@antelopejs/stripe`                           |
 
+The catalog also includes these contracts:
+
+| Interface | Package | Modules listed |
+| --- | --- | --- |
+| Database Catalog | `@antelopejs/interface-database-catalog` | none published in this catalog yet |
+| DMS | `@antelopejs/interface-dms` | `@antelopejs/dms` |
+| DMS Automation | `@antelopejs/interface-dms-automation` | `@antelopejs/dms-automation` |
+| DMS Builder | `@antelopejs/interface-dms-builder` | `@antelopejs/dms-builder` |
+| DMS Mailing | `@antelopejs/interface-dms-mailing` | `@antelopejs/dms-mailing` |
+| DMS Marketing | `@antelopejs/interface-dms-marketing` | `@antelopejs/dms-marketing` |
+| DMS Media | `@antelopejs/interface-dms-media` | `@antelopejs/dms-media` |
+| DMS SaaS | `@antelopejs/interface-dms-saas` | `@antelopejs/dms-saas` |
+| Email | `@antelopejs/interface-email` | `@antelopejs/nodemailer`, `@antelopejs/brevo` |
+| File Storage | `@antelopejs/interface-file-storage` | `@antelopejs/file-storage-local`, `@antelopejs/file-storage-s3` |
+
 ## Use it
 
 The CLI reads this repository by default. Resolve the missing implementations of a project from its folder:
@@ -40,6 +56,66 @@ The CLI reads this repository by default. Resolve the missing implementations of
 ```bash
 ajs project modules install
 ```
+
+### Start a DMS project
+
+Use a CLI release with project-template support to select **DMS Demo** in
+`ajs project init`, or pass the template explicitly:
+
+```bash
+ajs project init my-app --template "DMS Demo" --yes
+cd my-app
+pnpm run setup
+pnpm dev
+```
+
+The demo requires Node.js 24, pnpm and a running MongoDB instance. Run
+`pnpm frontend:dev` in a second terminal, then open the printed dashboard URL
+to create the first administrator. See the [template README](https://github.com/AntelopeJS/template-dms-demo#readme)
+for configuration and direct-clone instructions for older CLIs.
+
+`modules install` resolves missing contracts; it is not a menu of every DMS
+feature. Modules such as `dms-ai`, `dms-api`, `dms-database` and `dms-lang`
+do not declare an interface implementation. The demo already configures them.
+Installing an interface package alone does not configure a working dashboard.
+
+### Start a reusable DMS module
+
+Select **DMS Module Typescript** in `ajs module init`, or pass it explicitly:
+
+```bash
+ajs module init my-module --template "DMS Module Typescript" --pm pnpm --yes
+cd my-module
+pnpm run setup
+pnpm services:up
+pnpm dev
+```
+
+Run `pnpm frontend:dev` in a second terminal. This template contains a reusable
+module, one Vue component and a `playground/` project. Docker Compose supplies
+MongoDB and Mailpit; existing local services also work. See the
+[module template README](https://github.com/AntelopeJS/template-module-dms#readme).
+It belongs in `templates`, not `projectTemplates`: it is a module with a
+development host, not a complete application.
+
+### Project template metadata
+
+The root `projectTemplates` array holds complete projects. The CLI offers
+them only in `project init`, alongside the module templates in `templates`.
+Older CLIs ignore `projectTemplates`, so they cannot offer a project they
+would incorrectly overwrite. Keep complete projects out of `templates`.
+
+Both arrays use the required `name`, `repository` and `branch` fields and
+these optional fields:
+
+- `description`: a hint in the template selector, including prerequisites.
+- `packageManager`: require this package manager and skip its prompt.
+- `nextSteps`: commands and optional descriptions displayed after creation;
+  the CLI does not execute these commands automatically.
+
+Publish CLI support and the template's setup script before enabling a complete
+project template in the registry. CLI releases through 1.15.2 do not list
+complete project templates; use the direct-clone instructions with those releases.
 
 ## Add an interface or an implementation
 

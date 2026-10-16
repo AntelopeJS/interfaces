@@ -1,0 +1,14 @@
+{
+  "description": "DMS marketing audiences, segments and campaigns.",
+  "package": "@antelopejs/interface-dms-marketing",
+  "modules": [
+    {
+      "name": "dms-marketing",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/dms-marketing",
+        "version": "latest"
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Development-only introspection of external database schemas and relations. No public implementation is listed yet.",
+  "package": "@antelopejs/interface-database-catalog",
+  "modules": []
+}

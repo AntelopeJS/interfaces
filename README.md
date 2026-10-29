@@ -12,7 +12,7 @@ The catalog the `ajs` CLI reads to find which modules implement an interface. It
 
 - `ajs project modules install` finds the interfaces a project imports without an implementation, and offers the modules this registry lists for them.
 - `ajs module init` offers the starred interfaces of this registry when it scaffolds a module, and the templates listed here.
-- `ajs project init` also offers complete project templates, including **DMS Demo**.
+- `ajs project init` also offers complete project templates, including **DMS Demo** and **DMS Adonis**.
 - Each interface has a folder under `interfaces/` with a `manifest.json`: a description, the interface package and the modules that implement it.
 - The root `manifest.json` maps each interface package to its folder and lists the starred interfaces and the project templates.
 
@@ -89,6 +89,22 @@ for configuration and direct-clone instructions for older CLIs.
 feature. Modules such as `dms-ai`, `dms-api`, `dms-database` and `dms-lang`
 do not declare an interface implementation. The demo already configures them.
 Installing an interface package alone does not configure a working dashboard.
+
+### Start a DMS project inside AdonisJS
+
+Select **DMS Adonis** in `ajs project init` (CLI 1.16 or later), or pass it
+explicitly:
+
+```bash
+ajs project init my-app --template "DMS Adonis" --pm pnpm
+cd my-app
+cp .env.example .env
+node ace generate:key
+pnpm dev
+```
+
+This template runs the DMS embedded in an AdonisJS 6 application. See the
+[template README](https://github.com/AntelopeJS/template-dms-adonis#readme).
 
 ### Start a reusable DMS module
 

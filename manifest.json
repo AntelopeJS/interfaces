@@ -101,6 +101,27 @@
           "description": "In a second terminal in this directory, start the dashboard and open the printed URL to create the first administrator."
         }
       ]
+    },
+    {
+      "name": "DMS Adonis",
+      "description": "The DMS and its dashboard embedded in an AdonisJS 6 application. Requires Node.js 22.18 or later, pnpm and MongoDB.",
+      "repository": "https://github.com/AntelopeJS/template-dms-adonis.git",
+      "branch": "main",
+      "packageManager": "pnpm",
+      "nextSteps": [
+        {
+          "command": "cp .env.example .env && node ace generate:key",
+          "description": "Create the environment file and generate the application key."
+        },
+        {
+          "command": "pnpm dev",
+          "description": "Start MongoDB first, then start AdonisJS with the embedded DMS on http://localhost:3333."
+        },
+        {
+          "command": "pnpm frontend:build && pnpm frontend:start",
+          "description": "In a second terminal, build and start the dashboard on http://localhost:3001, then create the first administrator."
+        }
+      ]
     }
   ]
 }

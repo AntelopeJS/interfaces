@@ -86,6 +86,19 @@
   ],
   "projectTemplates": [
     {
+      "name": "DMS Starter",
+      "description": "AntelopeJS DMS with the Builder and the AI assistant, and no sample data. Requires Docker.",
+      "repository": "https://github.com/AntelopeJS/template-dms.git",
+      "branch": "main",
+      "packageManager": "pnpm",
+      "nextSteps": [
+        {
+          "command": "docker compose up",
+          "description": "Start the DMS and its MongoDB, open http://localhost:3001, and create the first administrator."
+        }
+      ]
+    },
+    {
       "name": "DMS Demo",
       "description": "Complete dashboard with all DMS features and a Vue frontend. Requires Node.js 24, pnpm and MongoDB.",
       "repository": "https://github.com/AntelopeJS/template-dms-demo.git",

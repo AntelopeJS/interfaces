@@ -12,7 +12,7 @@ The catalog the `ajs` CLI reads to find which modules implement an interface. It
 
 - `ajs project modules install` finds the interfaces a project imports without an implementation, and offers the modules this registry lists for them.
 - `ajs module init` offers the starred interfaces of this registry when it scaffolds a module, and the templates listed here.
-- `ajs project init` also offers complete project templates, including **DMS Demo** and **DMS Adonis**.
+- `ajs project init` also offers complete project templates, including **DMS Starter**, **DMS Demo**, and **DMS Adonis**.
 - Each interface has a folder under `interfaces/` with a `manifest.json`: a description, the interface package and the modules that implement it.
 - The root `manifest.json` maps each interface package to its folder and lists the starred interfaces and the project templates.
 
@@ -69,7 +69,19 @@ The CLI reads this repository by default. Resolve the missing implementations of
 ajs project modules install
 ```
 
-### Start a DMS project
+### Start a DMS project with Docker
+
+Select **DMS Starter** in `ajs project init`, or pass it explicitly:
+
+```bash
+ajs project init my-app --template "DMS Starter" --yes
+cd my-app
+docker compose up
+```
+
+This template runs the DMS, the Builder, and the AI assistant with no sample data. Docker Compose also starts the MongoDB that the DMS needs. Open <http://localhost:3001> to create the first administrator. See the [template README](https://github.com/AntelopeJS/template-dms#readme).
+
+### Start a DMS project with the demo application
 
 Use a CLI release with project-template support to select **DMS Demo** in
 `ajs project init`, or pass the template explicitly:

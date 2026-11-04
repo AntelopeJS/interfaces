@@ -8,6 +8,8 @@
 
 The catalog the `ajs` CLI reads to find which modules implement an interface. It holds metadata only: the interface packages and their implementations live on npm.
 
+Part of [AntelopeJS](https://github.com/AntelopeJS/antelopejs), the TypeScript framework where modules depend on contracts and the application chooses the provider. Built by the team behind [AntelopeJS DMS](https://github.com/AntelopeJS/dms).
+
 ## What it does
 
 - `ajs project modules install` finds the interfaces a project imports without an implementation, and offers the modules this registry lists for them.

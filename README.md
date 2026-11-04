@@ -12,7 +12,7 @@ The catalog the `ajs` CLI reads to find which modules implement an interface. It
 
 - `ajs project modules install` finds the interfaces a project imports without an implementation, and offers the modules this registry lists for them.
 - `ajs module init` offers the starred interfaces of this registry when it scaffolds a module, and the templates listed here.
-- `ajs project init` also offers complete project templates, including **DMS Starter**, **DMS Demo**, and **DMS Adonis**.
+- `ajs project init` also offers complete project templates, including **DMS Starter**, **DMS Connect Demo**, **DMS Demo**, and **DMS Adonis**.
 - Each interface has a folder under `interfaces/` with a `manifest.json`: a description, the interface package and the modules that implement it.
 - The root `manifest.json` maps each interface package to its folder and lists the starred interfaces and the project templates.
 
@@ -66,36 +66,42 @@ The catalog also includes these contracts:
 The CLI reads this repository by default. Resolve the missing implementations of a project from its folder:
 
 ```bash
-ajs project modules install
+npx @antelopejs/core project modules install
 ```
 
 ### Start a DMS project with Docker
 
-Select **DMS Starter** in `ajs project init`, or pass it explicitly:
-
 ```bash
-ajs project init my-app --template "DMS Starter" --yes
+npx @antelopejs/core project init my-app --template dms-starter --yes
 cd my-app
 docker compose up
 ```
 
-This template runs the DMS, the Builder, and the AI assistant with no sample data. Docker Compose also starts the MongoDB that the DMS needs. Open <http://localhost:3001> to create the first administrator. See the [template README](https://github.com/AntelopeJS/template-dms#readme).
+This template runs the DMS, the Builder, and the AI assistant with no sample data. Docker Compose also starts the MongoDB that the DMS needs. When the dashboard is ready on <http://localhost:3001>, open the onboarding address that the `dms` log prints after `[DMS] No owner exists yet`, and create the first administrator. See the [template README](https://github.com/AntelopeJS/template-dms#readme).
+
+### Try the Connect flow on a sample database
+
+```bash
+npx @antelopejs/core project init my-app --template dms-connect-demo --yes
+cd my-app
+docker compose up
+```
+
+This template runs the same DMS with a PostgreSQL sample database. `docker compose --profile mongodb up` or `docker compose --profile rethinkdb up` also starts a MongoDB or RethinkDB sample with the same data. Open the onboarding address that the `dms` log prints, create the first administrator, then connect the sample in the Builder. See the [template README](https://github.com/AntelopeJS/template-dms-connect-demo#readme).
 
 ### Start a DMS project with the demo application
 
-Use a CLI release with project-template support to select **DMS Demo** in
-`ajs project init`, or pass the template explicitly:
-
 ```bash
-ajs project init my-app --template "DMS Demo" --yes
+npx @antelopejs/core project init my-app --template dms-demo --yes
 cd my-app
 pnpm dev
 ```
 
 The demo requires Node.js 24, pnpm and a running MongoDB instance. Run
-`pnpm frontend:dev` in a second terminal, then open the printed dashboard URL
-to create the first administrator. See the [template README](https://github.com/AntelopeJS/template-dms-demo#readme)
-for configuration and direct-clone instructions for older CLIs.
+`pnpm frontend:dev` in a second terminal. Then open the onboarding address that
+the backend console prints, and create the first administrator. See the
+[template README](https://github.com/AntelopeJS/template-dms-demo#readme)
+for configuration.
 
 `modules install` resolves missing contracts; it is not a menu of every DMS
 feature. Modules such as `dms-ai`, `dms-api`, `dms-database` and `dms-lang`
@@ -104,26 +110,23 @@ Installing an interface package alone does not configure a working dashboard.
 
 ### Start a DMS project inside AdonisJS
 
-Select **DMS Adonis** in `ajs project init` (CLI 1.16 or later), or pass it
-explicitly:
-
 ```bash
-ajs project init my-app --template "DMS Adonis" --pm pnpm
+npx @antelopejs/core project init my-app --template dms-adonis --yes
 cd my-app
 cp .env.example .env
 node ace generate:key
 pnpm dev
 ```
 
-This template runs the DMS embedded in an AdonisJS 6 application. See the
+This template runs the DMS embedded in an AdonisJS 6 application. Build and
+start the dashboard in a second terminal, then open the onboarding address that
+the backend console prints. See the
 [template README](https://github.com/AntelopeJS/template-dms-adonis#readme).
 
 ### Start a reusable DMS module
 
-Select **DMS Module Typescript** in `ajs module init`, or pass it explicitly:
-
 ```bash
-ajs module init my-module --template "DMS Module Typescript" --pm pnpm --yes
+npx @antelopejs/core module init my-module --template dms-module-typescript --pm pnpm --yes
 cd my-module
 pnpm services:up
 pnpm dev
@@ -151,9 +154,10 @@ these optional fields:
 - `nextSteps`: commands and optional descriptions displayed after creation;
   the CLI does not execute these commands automatically.
 
-Project creation requires the CLI release with project-template support.
-CLI releases through 1.15.2 do not list
-complete project templates; use the direct-clone instructions with those releases.
+`--template` accepts the `name` or its kebab-case slug, such as
+`dms-connect-demo` for **DMS Connect Demo**. Template slugs require the
+`@antelopejs/core` release that ships them. Earlier
+releases accept only the `name`, such as `--template "DMS Connect Demo"`.
 
 ## Add an interface or an implementation
 

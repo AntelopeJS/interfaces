@@ -91,10 +91,11 @@
       "repository": "https://github.com/AntelopeJS/template-dms.git",
       "branch": "main",
       "packageManager": "pnpm",
+      "install": false,
       "nextSteps": [
         {
           "command": "docker compose up",
-          "description": "Start the DMS and its MongoDB, open http://localhost:3001, and create the first administrator."
+          "description": "Start the DMS and its MongoDB. When the dashboard is ready on http://localhost:3001, open the onboarding address printed in the dms log and create the first administrator."
         }
       ]
     },
@@ -111,7 +112,21 @@
         },
         {
           "command": "pnpm frontend:dev",
-          "description": "In a second terminal in this directory, start the dashboard and open the printed URL to create the first administrator."
+          "description": "In a second terminal in this directory, start the dashboard on http://localhost:3001. Then open the onboarding address printed in the pnpm dev log and create the first administrator."
+        }
+      ]
+    },
+    {
+      "name": "DMS Connect Demo",
+      "description": "AntelopeJS DMS with the Builder and the AI assistant, and sample PostgreSQL, MongoDB and RethinkDB databases to try the Connect flow. Requires Docker.",
+      "repository": "https://github.com/AntelopeJS/template-dms-connect-demo.git",
+      "branch": "main",
+      "packageManager": "pnpm",
+      "install": false,
+      "nextSteps": [
+        {
+          "command": "docker compose up",
+          "description": "Start the DMS, its MongoDB and the PostgreSQL sample. When the dashboard is ready on http://localhost:3001, open the onboarding address printed in the dms log and create the first administrator."
         }
       ]
     },
@@ -132,7 +147,7 @@
         },
         {
           "command": "pnpm frontend:build && pnpm frontend:start",
-          "description": "In a second terminal, build and start the dashboard on http://localhost:3001, then create the first administrator."
+          "description": "In a second terminal, build and start the dashboard on http://localhost:3001. Then open the onboarding address printed in the pnpm dev log and create the first administrator."
         }
       ]
     }

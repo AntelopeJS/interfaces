@@ -116,6 +116,19 @@
       ]
     },
     {
+      "name": "DMS Connect Demo",
+      "description": "AntelopeJS DMS with the Builder and the AI assistant, and sample PostgreSQL, MongoDB and RethinkDB databases to try the Connect flow. Requires Docker.",
+      "repository": "https://github.com/AntelopeJS/template-dms-connect-demo.git",
+      "branch": "main",
+      "packageManager": "pnpm",
+      "nextSteps": [
+        {
+          "command": "docker compose up",
+          "description": "Start the DMS, its MongoDB and the PostgreSQL sample. When the dashboard is ready on http://localhost:3001, open the onboarding address printed in the dms log and create the first administrator."
+        }
+      ]
+    },
+    {
       "name": "DMS Adonis",
       "description": "The DMS and its dashboard embedded in an AdonisJS 6 application. Requires Node.js 22.18 or later, pnpm and MongoDB.",
       "repository": "https://github.com/AntelopeJS/template-dms-adonis.git",

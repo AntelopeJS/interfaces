@@ -153,6 +153,10 @@ these optional fields:
 
 - `description`: a hint in the template selector, including prerequisites.
 - `packageManager`: require this package manager and skip its prompt.
+- `install`: `false` when the template installs its own dependencies, for
+  example inside its container. The CLI then copies the template and
+  installs nothing on the host, so the package manager does not have to be
+  installed. Absent or `true` installs the dependencies on the host.
 - `nextSteps`: commands and optional descriptions displayed after creation;
   the CLI does not execute these commands automatically.
 

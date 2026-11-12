@@ -1,14 +1,18 @@
-# AntelopeJS interface registry
+<a href="https://github.com/AntelopeJS/antelopejs"><img data-illustration src="./.github/readme/strip.svg" width="100%" alt="TOOLING · INTERFACE REGISTRY: part of AntelopeJS, hexagonal architecture beyond your own code. A glowing button reads Star AntelopeJS."></a>
 
 <div align="center">
-<a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache_2.0-000000?style=for-the-badge&labelColor=000000"></a>
-<a href="https://discord.gg/g4pFt6eXqu"><img alt="Discord" src="https://img.shields.io/badge/Discord-18181B?logo=discord&style=for-the-badge&color=000000"></a>
-<a href="https://framework.antelopejs.com/docs/module-development/interface-registry"><img alt="Docs" src="https://img.shields.io/badge/Docs-18181B?style=for-the-badge&color=000000"></a>
+
+# AntelopeJS interface registry
+
+<a href="./LICENSE"><img data-illustration alt="License" src="https://img.shields.io/badge/License-Apache_2.0-000000?style=for-the-badge&labelColor=000000&color=000000"></a> <a href="https://discord.gg/g4pFt6eXqu"><img data-illustration alt="Discord" src="https://img.shields.io/badge/Discord-18181B?logo=discord&style=for-the-badge&color=000000"></a> <a href="https://framework.antelopejs.com/docs/module-development/interface-registry"><img data-illustration alt="Documentation" src="https://img.shields.io/badge/Docs-18181B?style=for-the-badge&color=000000"></a> <a href="https://github.com/AntelopeJS/antelopejs"><img data-illustration alt="Star AntelopeJS" src="https://img.shields.io/github/stars/AntelopeJS/antelopejs?label=Star%20AntelopeJS&style=for-the-badge&labelColor=000000&color=000000&logo=github"></a>
+
+**The interface registry the ajs CLI reads to find which modules implement an interface.**
+
+[Documentation](https://framework.antelopejs.com/docs/module-development/interface-registry) · [All interfaces and providers](https://github.com/AntelopeJS/antelopejs#ecosystem)
+
 </div>
 
 The catalog the `ajs` CLI reads to find which modules implement an interface. It holds metadata only: the interface packages and their implementations live on npm.
-
-Part of [AntelopeJS](https://github.com/AntelopeJS/antelopejs), the TypeScript framework where modules depend on contracts and the application chooses the provider. Built by the team behind [AntelopeJS DMS](https://github.com/AntelopeJS/dms).
 
 ## What it does
 
@@ -191,6 +195,10 @@ For a new interface, also map its package to the folder in the `interfaces` obje
 ## Contributing
 
 Read [CONTRIBUTING.md](./CONTRIBUTING.md), then open a pull request with your manifest change.
+
+## Part of AntelopeJS
+
+This registry belongs to [AntelopeJS](https://github.com/AntelopeJS/antelopejs), the TypeScript framework where modules depend on contracts and the application chooses the provider. The open-source back office [AntelopeJS DMS](https://github.com/AntelopeJS/dms) is built on it.
 
 ## License
 

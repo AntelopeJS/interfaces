@@ -3,6 +3,14 @@
   "package": "@antelopejs/interface-database",
   "modules": [
     {
+      "name": "postgres",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/postgres",
+        "version": "latest"
+      }
+    },
+    {
       "name": "mongodb",
       "source": {
         "type": "package",

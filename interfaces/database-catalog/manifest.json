@@ -1,5 +1,30 @@
 {
-  "description": "Development-only inspection and aggregate profiling of existing database relations. No public implementation is registered yet.",
+  "description": "Development-only inspection and aggregate profiling of existing database relations.",
   "package": "@antelopejs/interface-database-catalog",
-  "modules": []
+  "modules": [
+    {
+      "name": "postgres",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/postgres",
+        "version": "latest"
+      }
+    },
+    {
+      "name": "mongodb",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/mongodb",
+        "version": "latest"
+      }
+    },
+    {
+      "name": "rethinkdb",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/rethinkdb",
+        "version": "latest"
+      }
+    }
+  ]
 }

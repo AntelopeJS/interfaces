@@ -11,6 +11,14 @@
       }
     },
     {
+      "name": "mysql",
+      "source": {
+        "type": "package",
+        "package": "@antelopejs/mysql",
+        "version": "latest"
+      }
+    },
+    {
       "name": "mongodb",
       "source": {
         "type": "package",

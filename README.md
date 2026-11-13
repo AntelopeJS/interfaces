@@ -61,7 +61,7 @@ The catalog also includes these contracts:
 | -------------- | -------------------------------------- | ---------------------------- |
 | DMS            | `@antelopejs/interface-dms`            | `@antelopejs/dms`            |
 | DMS Automation | `@antelopejs/interface-dms-automation` | `@antelopejs/dms-automation` |
-| DMS Builder    | `@antelopejs/interface-dms-builder`    | `@antelopejs/dms-builder`    |
+| DMS Builder    | `@antelopejs/interface-dms-builder`    | `@antelopejs/dms`            |
 | DMS Mailing    | `@antelopejs/interface-dms-mailing`    | `@antelopejs/dms-mailing`    |
 | DMS Marketing  | `@antelopejs/interface-dms-marketing`  | `@antelopejs/dms-marketing`  |
 | DMS Media      | `@antelopejs/interface-dms-media`      | `@antelopejs/dms-media`      |

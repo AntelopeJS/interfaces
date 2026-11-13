@@ -1,12 +1,12 @@
 {
-  "description": "DMS visual page builder and reusable blocks.",
+  "description": "Create and edit DMS pages, blocks, resources and queries from another module. Served by the DMS in development.",
   "package": "@antelopejs/interface-dms-builder",
   "modules": [
     {
-      "name": "dms-builder",
+      "name": "dms",
       "source": {
         "type": "package",
-        "package": "@antelopejs/dms-builder",
+        "package": "@antelopejs/dms",
         "version": "latest"
       }
     }

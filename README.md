@@ -110,7 +110,7 @@ the backend console prints, and create the first administrator. See the
 for configuration.
 
 `modules install` resolves missing contracts; it is not a menu of every DMS
-feature. Modules such as `dms-ai`, `dms-api`, `dms-database` and `dms-lang`
+feature. Modules such as `dms-assistant`, `dms-api`, `dms-database` and `dms-lang`
 do not declare an interface implementation. The demo already configures them.
 Installing an interface package alone does not configure a working dashboard.
 

@@ -1,7 +1,8 @@
-name: Documentation
+name: ci
 
 on:
   pull_request:
+  merge_group:
   push:
     branches: [main]
 
@@ -9,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  docs:
+  checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

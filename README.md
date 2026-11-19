@@ -83,7 +83,7 @@ cd my-app
 docker compose up
 ```
 
-This template runs the DMS, the Builder, and the AI assistant with no sample data. Docker Compose also starts the MongoDB that the DMS needs. When the dashboard is ready on <http://localhost:3001>, open the onboarding address that the `dms` log prints after `[DMS] No owner exists yet`, and create the first administrator. See the [template README](https://github.com/AntelopeJS/template-dms#readme).
+This template runs the DMS and the AI assistant with no sample data. Docker Compose also starts the MongoDB that the DMS needs. When the dashboard is ready on <http://localhost:3001>, open the onboarding address that the `dms` log prints after `[DMS] No owner exists yet`, and create the first administrator. See the [template README](https://github.com/AntelopeJS/template-dms#readme).
 
 ### Try the Connect flow on a sample database
 
@@ -93,7 +93,7 @@ cd my-app
 docker compose up
 ```
 
-This template runs the same DMS with a PostgreSQL sample database. `docker compose --profile mongodb up` or `docker compose --profile rethinkdb up` also starts a MongoDB or RethinkDB sample with the same data. Open the onboarding address that the `dms` log prints, create the first administrator, then connect the sample in the Builder. See the [template README](https://github.com/AntelopeJS/template-dms-connect-demo#readme).
+This template runs the same DMS with a PostgreSQL sample database. `docker compose --profile mongodb up` or `docker compose --profile rethinkdb up` also starts a MongoDB or RethinkDB sample with the same data. Open the onboarding address that the `dms` log prints, create the first administrator, then connect the sample from **Start from an existing database** in the assistant's onboarding. See the [template README](https://github.com/AntelopeJS/template-dms-connect-demo#readme).
 
 ### Start a DMS project with the demo application
 

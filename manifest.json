@@ -87,7 +87,7 @@
   "projectTemplates": [
     {
       "name": "DMS Starter",
-      "description": "AntelopeJS DMS with the Builder and the AI assistant, and no sample data. Requires Docker.",
+      "description": "AntelopeJS DMS with the AI assistant, its onboarding and live mockups, and no sample data. Connect your Postgres, MySQL/MariaDB or MongoDB database, or start from scratch. Requires Docker.",
       "repository": "https://github.com/AntelopeJS/template-dms.git",
       "branch": "main",
       "packageManager": "pnpm",
@@ -118,7 +118,7 @@
     },
     {
       "name": "DMS Connect Demo",
-      "description": "AntelopeJS DMS with the Builder and the AI assistant, and sample PostgreSQL, MongoDB and RethinkDB databases to try the Connect flow. Requires Docker.",
+      "description": "AntelopeJS DMS with the AI assistant and sample PostgreSQL, MySQL, MariaDB, MongoDB and RethinkDB databases to try connecting a database and mocking up its back office. Requires Docker.",
       "repository": "https://github.com/AntelopeJS/template-dms-connect-demo.git",
       "branch": "main",
       "packageManager": "pnpm",

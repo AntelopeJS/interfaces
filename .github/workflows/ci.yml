@@ -20,3 +20,18 @@ jobs:
       - uses: AntelopeJS/tooling-configs/actions/docs@310e3d861b2da2244902854379176c91e1ebc68e
         with:
           files: README.md
+
+  verdict:
+    needs: [checks]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail when a needed job failed or was cancelled
+        env:
+          RESULTS: ${{ join(needs.*.result, ' ') }}
+        run: |
+          for result in $RESULTS; do
+            if [ "$result" = "failure" ] || [ "$result" = "cancelled" ]; then
+              exit 1
+            fi
+          done

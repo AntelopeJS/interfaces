@@ -124,7 +124,7 @@ node ace generate:key
 pnpm dev
 ```
 
-This template runs the DMS embedded in an AdonisJS 6 application. Build and
+This template runs the DMS embedded in an AdonisJS 7 application. Build and
 start the dashboard in a second terminal, then open the onboarding address that
 the backend console prints. See the
 [template README](https://github.com/AntelopeJS/template-dms-adonis#readme).

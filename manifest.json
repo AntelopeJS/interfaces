@@ -132,7 +132,7 @@
     },
     {
       "name": "DMS Adonis",
-      "description": "The DMS and its dashboard embedded in an AdonisJS 6 application. Requires Node.js 22.18 or later, pnpm and MongoDB.",
+      "description": "The DMS and its dashboard embedded in an AdonisJS 7 application. Requires Node.js 24 or later, pnpm and MongoDB.",
       "repository": "https://github.com/AntelopeJS/template-dms-adonis.git",
       "branch": "main",
       "packageManager": "pnpm",
